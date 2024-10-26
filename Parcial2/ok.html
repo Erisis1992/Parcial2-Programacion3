@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Header</title>
+<style>
+  /* Basic reset and styling */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  /* Header styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  /* Left-aligned home icon */
+  .header .left {
+    display: flex;
+    align-items: center;
+  }
+
+  .home-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  /* Center-aligned title */
+  .header .center {
+    flex: 1;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  /* Right-aligned buttons */
+  .header .right button {
+    background-color: #fff;
+    color: #4CAF50;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+  }
+
+  .header .right button:hover {
+    background-color: #ddd;
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="left">
+    <span class="home-icon">🏠</span>
+  </div>
+  <div class="center">
+    <h1>Website Title</h1>
+  </div>
+  <div class="right">
+    <button>Button 1</button>
+    <button>Button 2</button>
+  </div>
+</header>
+
+</body>
+</html>
