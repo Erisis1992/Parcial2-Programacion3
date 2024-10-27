@@ -13,12 +13,15 @@ div{
     margin: 0 20px 0 20px;
     align-items: center;
 }
-input[type="submit"]  {
+input[type="submit"],button  {
     padding: 10px;
     margin: 0 10px 0 10px;
     background-color: #EDD79B;
     border: solid #5C3A1D;
     border-radius: 15px;
+}
+input[type="submit"]:active{
+    background-color: #965E30;
 }
 header {
     display: flex;
