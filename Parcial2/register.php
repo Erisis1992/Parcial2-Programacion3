@@ -23,7 +23,7 @@
     <div class="card">
         <h4>Registro de usuario</h4>
         <div>
-            <form id="formu" action="./Api2/api.php" method="POST">
+            <form id="formu" action="" method="POST">
                 <input type="text" name="nombre" placeholder="Nombre de usuario" required>
                 <input type="text" name="email" placeholder="Correo electrónico" required>
                 <input type="password" id="password" name="contrasena" placeholder="Contraseña" oninput="validatePassword()" required>

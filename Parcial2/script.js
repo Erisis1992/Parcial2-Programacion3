@@ -4,7 +4,38 @@ var check = {
     lowercase: false,
     number: false
 }
-
+document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+    
+    // Create a FormData object from the form
+    const formData = new FormData(this);
+    var checker = 0;
+   check.forEach(element => {
+    if (element==true){
+        checker+=1;
+    }else{}
+   });
+   if (checker=4){
+    checker=0;
+    check.forEach(element => {
+        element=false;
+    });
+         // Send the form data to a PHP file using fetch
+    fetch("submit.php", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+        // Display the response in an HTML element (for example, a <div> with id "response")
+        document.getElementById("response").innerHTML = data;
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+   }
+  });
+  
 function validatePassword() {
     const password = document.getElementById('password').value;
     const length = document.getElementById('length');
