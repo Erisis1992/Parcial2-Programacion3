@@ -14,17 +14,19 @@
         <div class="title">
             <h1>Parcial 2 de Programación 3</h1>
         </div>
-        <div class="icons">
-            <form action="./api/post.php" method="get">
-                <input type="submit" id="SignUp" value="Registrarme"></input>
-                <input type="submit"  id="Login" value="Iniciar Sesion"></input>
-            </form>
-        </div>
+        <div></div>
     </header>
     <div class="medium">
-        <form action="./api/mailer.php">
-            <input type="submit" value="Enviar correo">
-        </form>
+        <div id="log" class="card">
+            <div><h4>Si tenes una cuenta registrada, podes iniciar sesión aca</h4></div>
+            <form action="post.php" method="get"></form>
+                <input type="submit"  id="logi" value="Iniciar Sesion"></input>
+            </form>
+        </div>
+        <div id="reg" class="card">
+        <div><h4>Si tienes no tenes una cuenta, te podes registrar aca</h4></div>
+            <button><a href="register.php">Registrarme</a></button>
+        </div>
     </div>
     <footer>
         <p id="fooText">&copy;2024 - Ismael Chaves</p>

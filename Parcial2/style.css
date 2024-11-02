@@ -3,6 +3,7 @@ body{
     padding: 0;
     font-family: Arial, sans-serif;
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
 div{
@@ -19,9 +20,15 @@ input[type="submit"],button  {
     background-color: #EDD79B;
     border: solid #5C3A1D;
     border-radius: 15px;
+    margin: 5px;
 }
-input[type="submit"]:active{
+input[type="submit"]:active,button:active{
     background-color: #965E30;
+    
+}
+input[type="text"],input[type="password"]{
+    padding: 10px;
+    margin:5px;
 }
 header {
     display: flex;
@@ -43,9 +50,38 @@ footer {
     bottom: 0%;
     width: 100%;
     background-color: #e29522;
-    box-shadow: 2px 8px 5px #965E30;
+    box-shadow: 2px -8px 5px #965E30;
     margin: 5000px 0 0 0;
 }
 #fooText {
     margin: 30px;
+}
+.card{
+    flex-direction: column;
+    background-color: #d1d1d1;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+#formu{
+    display: flex;
+    flex-direction: column;
+}
+a{
+    color:black;
+    text-decoration:none;
+}
+.invalid {
+    color: red;
+}
+
+.valid {
+    color: green;
+}
+.hidden{
+    display: none;
+}
+.show{
+    display: block;
 }
