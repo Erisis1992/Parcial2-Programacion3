@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +26,7 @@
     <div class="card">
         <h4>Registro de usuario</h4>
         <div>
-            <form id="formu" action="" method="POST">
+            <form id="formu" action="./Api2/api.php" method="POST">
                 <input type="text" name="nombre" placeholder="Nombre de usuario" required>
                 <input type="text" name="email" placeholder="Correo electrónico" required>
                 <input type="password" id="password" name="contrasena" placeholder="Contraseña" oninput="validatePassword()" required>
@@ -33,10 +36,22 @@
                     <li id="lowercase" class="invalid">Al menos una letra minuscula</li>
                     <li id="number" class="invalid">Al menos un numero</li>
                 </ul>
-                <input type="submit" value="Registrarme">
+                <input onclick="onClick()" type="submit" value="Registrarme">
             </form>
         </div>
     </div>
     <script src="./script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcLe3UqAAAAAECfGldQHBjt-tf7D0pI0sUD-NEi"></script>
+    <script>
+      function onClick(e) {
+        e.preventDefault();
+        grecaptcha.ready(function() {
+          grecaptcha.execute('6LcLe3UqAAAAAECfGldQHBjt-tf7D0pI0sUD-NEi', {action: 'submit'}).then(function(token) {
+              // Add your logic to submit to your backend server here.
+          });
+        });
+      }
+  </script>
+
 </body>
 </html>

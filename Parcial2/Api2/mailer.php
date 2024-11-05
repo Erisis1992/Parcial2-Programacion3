@@ -3,6 +3,7 @@
 require '..\composer\vendor\autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+$token = bin2hex(random_bytes(16));
 
 function Mailer($correo){
     $mail = new PHPMailer(TRUE);
