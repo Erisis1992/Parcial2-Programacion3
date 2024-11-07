@@ -1,0 +1,10 @@
+datos a necesitar:
+nombre
+email
+contraseña (hasheada)
+validacion de cuenta (activada/desactivada)
+fecha de creación
+
+fecha de modificacion (tabla propia)
+
+Fecha y Hora de ultima sesion(tabla propia)
